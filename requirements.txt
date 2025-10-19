@@ -1,0 +1,5 @@
+pandas
+scikit-learn
+streamlit
+matplotlib
+pickle5   # optional, normal pickle is fine
