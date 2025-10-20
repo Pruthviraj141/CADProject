@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 pandas
 scikit-learn
 streamlit
 matplotlib
 pickle5   # optional, normal pickle is fine
+=======
+pandas
+scikit-learn
+streamlit
+matplotlib
+pickle5   # optional, normal pickle is fine
+>>>>>>> 8f839236fbe14db95ab7713d7e0a300a6aed13cf
