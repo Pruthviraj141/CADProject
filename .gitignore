@@ -1,2 +1,6 @@
-rf_model.pkl 
-rf_model.pkl 
+*.pkl
+venv/
+__pycache__/
+nohup.out
+
+
