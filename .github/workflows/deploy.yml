@@ -1,0 +1,35 @@
+name: Deploy Streamlit App to EC2
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Copy files to EC2
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: 65.0.173.178
+        username: ubuntu
+        key: ${{ secrets.EC2_SSH_KEY }}
+        source: "."
+        target: "/home/ubuntu/streamlit_app/boardgame-rating"
+
+    - name: Install dependencies and restart streamlit service
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: 65.0.173.178
+        username: ubuntu
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd /home/ubuntu/streamlit_app/boardgame-rating
+          source venv/bin/activate
+          pip install -r requirements.txt
+          sudo systemctl restart streamlit
+
