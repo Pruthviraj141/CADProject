@@ -43,7 +43,7 @@ def predict_lr_dummy(users_rated, minplayers, maxplayers, playingtime, yearpubli
 
 
 # --- Streamlit UI Setup ---
-st.set_page_config(page_title="🎯 Board Game Rating Predictor", layout="centered")
+st.set_page_config(page_title="🎯 Board Game Rating Predictor Using ML", layout="centered")
 
 # --- Custom CSS for better visuals ---
 st.markdown("""
