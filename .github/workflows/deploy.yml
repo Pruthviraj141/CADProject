@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies and restart streamlit service
       uses: appleboy/ssh-action@v1.0.3
       with:
-        host: 65.0.173.178
+        host: ${{ secrets.EC2_HOST }}
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
