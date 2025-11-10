@@ -46,7 +46,7 @@ def predict_lr_dummy(users_rated, minplayers, maxplayers, playingtime, yearpubli
 st.set_page_config(page_title="🎯 Board Game Rating Predictor Using ML", layout="centered")
 
 # --- Header ---
-st.title("🎲 Board Game Rating Prediction.....")
+st.title("🎲 Board Game Prediction.....")
 st.caption("Estimate how your board game might be rated by players based on its specifications.")
 st.markdown("---")
 
